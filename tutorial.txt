@@ -46,3 +46,5 @@ npm install mysql2 --save
 //Criando o database e setando para caracteres especiais:
 create database base character set utf8mb4 collate utf8mb4_unicode_ci;
 
+//Adicionando o .env que são as variaveis de ambiente:
+npm install dotenv

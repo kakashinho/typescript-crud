@@ -2,14 +2,17 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { Post } from "./entities/Post";
 import { Category } from "./entities/Category";
+import * as dotenv from "dotenv"
+dotenv.config()
+
 
 export const AppDataSource = new DataSource({
     type: "mysql",
-    host: "localhost",
-    port: 3306,
-    username: "root",
-    password: "Senha*",
-    database: "base",
+    host: process.env.DB_HOST!,
+    port: Number(process.env.DB_PORT!),
+    username: process.env.DB_USERNAME!,
+    password: process.env.DB_PASSWORD!,
+    database: process.env.DB_NAME!,
     synchronize: true,
     logging: true,
     entities: [Post, Category],

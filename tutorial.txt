@@ -1,0 +1,48 @@
+node -v
+npm init -y
+
+//Instalar o Express para gerenciar as requisições, rotas e URls, entre outra funcionalidades.
+npm i express
+
+
+// o --save-dev é para instalar somente na versão de desenvolvedor
+npm i --save-dev @types/express
+npm i --save-dev @types/node
+
+//Instalar o compilador projeto com Typescript e reiniciar o projeto quando o arquivo é modificado.
+
+npm i --save-dev ts-node
+
+//Gerar o arquivo de configuração para o Typescript
+npx tsc --init
+
+//Configure o tsconfig.json:
+  "rootDir": "./src",
+  "outDir": "./dist",
+
+  //Quando essa opção está true, o TypeScript exige que tipos sejam importados separadamente com import type.
+  "verbatimModuleSyntax": false,
+
+  //Erros com o Banco para conectar configurando o tsconfig:
+  "strictPropertyInitialization": false,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+
+//Compilar o arquivo Typescript
+npx tsc
+
+//Conexão com o Banco
+mysql --version
+
+// Pesquise no google Typescript ORM e instale:
+npm install typeorm --save
+
+// Instalar outra depêndencia:
+npm install reflect-metadata --save
+
+//Instalar a dependencia para sua conexão com o banco:
+npm install mysql2 --save
+
+//Criando o database e setando para caracteres especiais:
+create database base character set utf8mb4 collate utf8mb4_unicode_ci;
+

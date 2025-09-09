@@ -30,6 +30,7 @@ npx tsc --init
 
 //Compilar o arquivo Typescript
 npx tsc
+node dist/index.js
 
 //Conexão com o Banco
 mysql --version
@@ -48,3 +49,7 @@ create database base character set utf8mb4 collate utf8mb4_unicode_ci;
 
 //Adicionando o .env que são as variaveis de ambiente:
 npm install dotenv
+
+//Dependecia cors npm
+npm install cors
+npm install --save-dev @types/cors

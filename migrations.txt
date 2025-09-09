@@ -1,0 +1,4 @@
+//Criando a migrations que será usada para criar a tabela no bancod de dados.
+npx typeorm migration:create src/migration/CreateUsersTable
+
+npx typeorm migration:run -d dist/data-source.js
